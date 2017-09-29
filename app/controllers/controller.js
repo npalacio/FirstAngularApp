@@ -1,6 +1,13 @@
-app.directive("nicksFirstDir", function() {
-return {
-    template: "<h1>This is a working directive</h1><p>smaller text</p>",
-    restrict: 'E'
-};
+define([
+    "app"
+], function(
+    app
+) {
+    app.controller("nCtrl", function($scope){
+        $scope.name = 'nick';
+        $scope.newName = 'Shannon';
+        $scope.changeVar = function() {
+            $scope.name = 'Joe';
+        };
+    });
 });
