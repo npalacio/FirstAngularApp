@@ -1,6 +1,6 @@
 require({
-    // async: true,
     paths: {
+        // This is the text plugin that is loaded when you prefix a dependency with 'text!'
         text: "//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text.min",
         app: "app/app",
         controllers: "app/controllers",
@@ -10,10 +10,8 @@ require({
 });
 
 require([
-    // "text",
     "app"
 ], function(
-    // requireText,
     app
 ) {
     require([

@@ -8,7 +8,6 @@ define([
     app.directive("navBar", function() {
         return {
             template: navBarTemplate,
-            // template: "test template",
             restrict: 'E'
         };
     });
