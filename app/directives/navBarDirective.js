@@ -1,12 +1,14 @@
 define([
-    "app"
+    "app",
+    "text!templates/navBarTemplate.html"
 ], function(
-    app
+    app,
+    navBarTemplate
 ) {
     app.directive("navBar", function() {
         return {
-            // templateUrl: "./app/templates/navBarTemplate.html",
-            template: "test template",
+            template: navBarTemplate,
+            // template: "test template",
             restrict: 'E'
         };
     });

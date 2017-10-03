@@ -1,15 +1,19 @@
 require({
     // async: true,
     paths: {
+        text: "//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text.min",
         app: "app/app",
         controllers: "app/controllers",
-        directives: "app/directives"
+        directives: "app/directives",
+        templates: "app/templates"
     }
 });
 
 require([
+    // "text",
     "app"
 ], function(
+    // requireText,
     app
 ) {
     require([
