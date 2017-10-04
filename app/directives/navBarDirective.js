@@ -5,7 +5,7 @@ define([
     app,
     navBarTemplate
 ) {
-    app.directive("navBar", function() {
+    return app.directive("navBar", function() {
         return {
             template: navBarTemplate,
             restrict: 'E'

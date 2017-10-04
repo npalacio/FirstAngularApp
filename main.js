@@ -6,7 +6,9 @@ require({
         route: "app/route",
         controllers: "app/controllers",
         directives: "app/directives",
-        templates: "app/templates"
+        templates: "app/templates",
+        factories: "app/factories",
+        services: "app/services"
     }
 });
 
@@ -17,14 +19,22 @@ require([
 ) {
     require([
         "route",
-        "controllers/controller",
+        "controllers/mainController",
+        "controllers/homeController",
+        "controllers/myNotesController",
         "directives/navBarDirective",
-        "directives/headerDirective"
+        "directives/headerDirective",
+        "factories/noteFactory",
+        "services/noteService"
     ], function(
         route,
-        controller,
+        mainController,
+        homeController,
+        myNotesController,
         navBarDirective,
-        headerDirective
+        headerDirective,
+        noteFactory,
+        noteService
     ) {
         // Once we have our module fully loaded and have added our 
         // other parts to it we bootstrap it to our document

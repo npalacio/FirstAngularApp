@@ -5,7 +5,7 @@ define([
     app,
     headerTemplate
 ) {
-    app.directive("header", function() {
+    return app.directive("header", function() {
         return {
             template: headerTemplate,
             restrict: 'E'
