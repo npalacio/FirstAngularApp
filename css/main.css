@@ -1,0 +1,11 @@
+body {
+    font-family: 'Optima', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, Arial, sans-serif;
+}
+.centerText {
+    text-align: center;
+}
+.navBar {
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+}
