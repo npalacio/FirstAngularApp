@@ -17,6 +17,10 @@ define([
             template: myNotesTemplate,
             controller: 'myNotesController'
         })
+        .when("/contactUs", {
+            template: contactUsTemplate,
+            controller: 'contactUsController'
+        })
         .otherwise("/", {
             template: homeTemplate,
             controller: 'homeController'

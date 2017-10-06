@@ -1,13 +1,16 @@
 define([
-    "app",
-    "factories/noteFactory"
+    "app"
 ], function(
-    app,
-    noteFactory
+    app
 ) {
-    return app.controller("homeController", ["$scope", function($scope){
+    return app.controller("homeController", ["$scope", "noteFactory", function($scope, noteFactory){
         $scope.name = 'First Note';
-        $scope.note = noteFactory.getAllNotes();
+        $scope.notes = "";
+        noteFactory.getAllNotes().then(function(notes) {
+            $scope.notes = notes;
+        }, function() {
+            console.log('Error getting all notes');
+        });
     }]);
 });
 

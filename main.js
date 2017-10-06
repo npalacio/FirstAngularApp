@@ -7,8 +7,7 @@ require({
         controllers: "app/controllers",
         directives: "app/directives",
         templates: "app/templates",
-        factories: "app/factories",
-        services: "app/services"
+        factories: "app/factories"
     }
 });
 
@@ -18,26 +17,28 @@ require([
     app
 ) {
     require([
-        "route",
-        "controllers/mainController",
-        "controllers/homeController",
-        "controllers/myNotesController",
-        "directives/navBarDirective",
-        "directives/headerDirective",
-        "factories/noteFactory",
-        "services/noteService"
+        "factories/noteFactory"
     ], function(
-        route,
-        mainController,
-        homeController,
-        myNotesController,
-        navBarDirective,
-        headerDirective,
-        noteFactory,
-        noteService
+        noteFactory
     ) {
-        // Once we have our module fully loaded and have added our 
-        // other parts to it we bootstrap it to our document
-        angular.bootstrap(document,["app"]);
+        require([
+            "route",
+            "controllers/mainController",
+            "controllers/homeController",
+            "controllers/myNotesController",
+            "directives/navBarDirective",
+            "directives/headerDirective"
+        ], function(
+            route,
+            mainController,
+            homeController,
+            myNotesController,
+            navBarDirective,
+            headerDirective
+        ) {
+            // Once we have our module fully loaded and have added our 
+            // other parts to it we bootstrap it to our document
+            angular.bootstrap(document,["app"]);
+        });
     });
 });
