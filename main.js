@@ -26,6 +26,7 @@ require([
             "controllers/mainController",
             "controllers/homeController",
             "controllers/myNotesController",
+            "controllers/contactUsController",
             "directives/navBarDirective",
             "directives/headerDirective"
         ], function(
@@ -33,6 +34,7 @@ require([
             mainController,
             homeController,
             myNotesController,
+            contactUsController,
             navBarDirective,
             headerDirective
         ) {

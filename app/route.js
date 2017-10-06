@@ -1,11 +1,13 @@
 define([
     "app",
     "text!templates/homeTemplate.html",
-    "text!templates/myNotesTemplate.html"
+    "text!templates/myNotesTemplate.html",
+    "text!templates/contactUsTemplate.html"
 ], function(
     app,
     homeTemplate,
-    myNotesTemplate
+    myNotesTemplate,
+    contactUsTemplate
 ) {
     app.config(function($routeProvider){
         $routeProvider
